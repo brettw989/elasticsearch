@@ -1,0 +1,124 @@
+# .github/workflows/elasticsearch-sync.yml
+# Syncs fork from elastic/elasticsearch, rebuilds docs/AGENT-INDEX.md
+# and docs/agent-manifest.txt (1,300+ doc files organized by directory).
+# Repo: brettw989/elasticsearch
+
+name: Sync Fork & Rebuild Indexes
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync fork from upstream
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "::group::Syncing fork from elastic/elasticsearch"
+          gh repo sync "${{ github.repository }}" --source elastic/elasticsearch --force || {
+            echo "::warning::gh repo sync failed — upstream may be unavailable or fork is up to date"
+          }
+          echo "::endgroup::"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Rebuild docs/AGENT-INDEX.md
+        run: |
+          set -euo pipefail
+
+          DOCS_ROOT="docs"
+          INDEX_FILE="${DOCS_ROOT}/AGENT-INDEX.md"
+
+          if [ ! -d "$DOCS_ROOT" ]; then
+            echo "::error::docs/ directory not found"
+            exit 1
+          fi
+
+          TEMP_INDEX=$(mktemp)
+
+          # ── Count total .md files ──
+          TOTAL_FILES=$(find "$DOCS_ROOT" -type f -name "*.md" ! -name "AGENT-INDEX.md" | wc -l | tr -d ' ')
+
+          # ── Collect all directories containing .md files ──
+          TEMP_DIRS=$(mktemp)
+          find "$DOCS_ROOT" -type f -name "*.md" ! -name "AGENT-INDEX.md" -printf '%h\n' | sort -u > "$TEMP_DIRS"
+          TOTAL_DIRS=$(wc -l < "$TEMP_DIRS" | tr -d ' ')
+
+          # ── Write header ──
+          {
+            echo "# Elasticsearch Documentation Index"
+            echo "Generated for agent-assisted navigation."
+            echo ""
+            echo "## Overview"
+            echo "- Total documentation files: ${TOTAL_FILES}"
+            echo "- Total directories: ${TOTAL_DIRS}"
+            echo "- Source: \`docs/\` directory tree"
+            echo ""
+            echo "## Directory Listing"
+            echo ""
+          } > "$TEMP_INDEX"
+
+          # ── For each directory, list files with counts ──
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            rel_dir="${dir#./}"
+
+            # Count files in this specific directory (not recursive)
+            FILE_COUNT=$(find "$dir" -maxdepth 1 -type f -name "*.md" ! -name "AGENT-INDEX.md" | wc -l | tr -d ' ')
+            [ "$FILE_COUNT" -eq 0 ] && continue
+
+            {
+              echo "### \`${rel_dir}/\` (${FILE_COUNT} files)"
+            } >> "$TEMP_INDEX"
+
+            # List files (just filenames for readability, since paths are in manifest)
+            while IFS= read -r md_file; do
+              fname=$(basename "$md_file")
+              echo "- ${fname}" >> "$TEMP_INDEX"
+            done < <(find "$dir" -maxdepth 1 -type f -name "*.md" ! -name "AGENT-INDEX.md" | sort)
+
+            echo "" >> "$TEMP_INDEX"
+          done < "$TEMP_DIRS"
+
+          rm -f "$TEMP_DIRS"
+          mv "$TEMP_INDEX" "$INDEX_FILE"
+          echo "Rebuilt $INDEX_FILE (${TOTAL_FILES} files across ${TOTAL_DIRS} directories)"
+
+      - name: Rebuild docs/agent-manifest.txt
+        run: |
+          set -euo pipefail
+
+          DOCS_ROOT="docs"
+          MANIFEST="${DOCS_ROOT}/agent-manifest.txt"
+
+          find "$DOCS_ROOT" -type f -name "*.md" ! -name "AGENT-INDEX.md" | sort > "$MANIFEST"
+          echo "Rebuilt $MANIFEST ($(wc -l < "$MANIFEST") entries)"
+
+      - name: Commit and push if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs/AGENT-INDEX.md docs/agent-manifest.txt
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: daily sync and index rebuild [automated] [skip ci]"
+          git push
+          echo "Changes committed and pushed"
