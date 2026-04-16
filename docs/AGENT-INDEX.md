@@ -2,8 +2,8 @@
 Generated for agent-assisted navigation.
 
 ## Overview
-- Total documentation files: 2628
-- Total directories: 85
+- Total documentation files: 2651
+- Total directories: 87
 - Source: `docs/` directory tree
 
 ## Directory Listing
@@ -240,8 +240,9 @@ Generated for agent-assisted navigation.
 - syskeygen.md
 - users-command.md
 
-### `docs/reference/elasticsearch/configuration-reference/` (31 files)
+### `docs/reference/elasticsearch/configuration-reference/` (37 files)
 - auding-settings.md
+- azure-repository-settings.md
 - circuit-breaker-settings.md
 - cluster-level-shard-allocation-routing-settings.md
 - cross-cluster-replication-settings.md
@@ -249,6 +250,8 @@ Generated for agent-assisted navigation.
 - discovery-cluster-formation-settings.md
 - enrich-settings.md
 - field-data-cache-settings.md
+- fs-repository-settings.md
+- gcs-repository-settings.md
 - health-diagnostic-settings.md
 - index-lifecycle-management-settings.md
 - index-management-settings.md
@@ -265,12 +268,15 @@ Generated for agent-assisted navigation.
 - node-query-cache-settings.md
 - node-settings.md
 - remote-clusters.md
+- s3-repository-settings.md
 - search-settings.md
 - security-settings.md
 - shard-request-cache-settings.md
 - snapshot-restore-settings.md
+- source-repository-settings.md
 - thread-pool-settings.md
 - transforms-settings.md
+- url-repository-settings.md
 - watcher-settings.md
 
 ### `docs/reference/elasticsearch/index-lifecycle-actions/` (13 files)
@@ -626,6 +632,15 @@ Generated for agent-assisted navigation.
 - filterOnLeftSide.md
 - filterOnRightSide.md
 
+### `docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/` (7 files)
+- metricsInfoBasic.md
+- metricsInfoCountByType.md
+- metricsInfoCountMatching.md
+- metricsInfoDiscover.md
+- metricsInfoFilterByName.md
+- metricsInfoFilterByType.md
+- metricsInfoKeep.md
+
 ### `docs/reference/query-languages/esql/_snippets/commands/examples/mmr.csv-spec/` (3 files)
 - simpleMMR.md
 - simpleMMRWithQueryVector.md
@@ -678,13 +693,21 @@ Generated for agent-assisted navigation.
 - subquery_with_lookup_join.md
 - subquery_with_sort.md
 
+### `docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/` (6 files)
+- tsInfoBasic.md
+- tsInfoCountByMetric.md
+- tsInfoCountDistinctByDimensions.md
+- tsInfoDiscover.md
+- tsInfoFilterByGauge.md
+- tsInfoKeep.md
+
 ### `docs/reference/query-languages/esql/_snippets/commands/examples/uri_parts.csv-spec/` (1 files)
 - basic.md
 
 ### `docs/reference/query-languages/esql/_snippets/commands/examples/user_agent.csv-spec/` (1 files)
 - basic.md
 
-### `docs/reference/query-languages/esql/_snippets/commands/layout/` (29 files)
+### `docs/reference/query-languages/esql/_snippets/commands/layout/` (31 files)
 - change_point.md
 - completion.md
 - dissect.md
@@ -699,6 +722,7 @@ Generated for agent-assisted navigation.
 - keep.md
 - limit.md
 - lookup-join.md
+- metrics-info.md
 - mmr.md
 - mv_expand.md
 - registered_domain.md
@@ -710,6 +734,7 @@ Generated for agent-assisted navigation.
 - show.md
 - sort.md
 - stats-by.md
+- ts-info.md
 - ts.md
 - uri_parts.md
 - user_agent.md
@@ -1923,7 +1948,7 @@ Generated for agent-assisted navigation.
 - rlike.md
 - sub.md
 
-### `docs/reference/query-languages/esql/commands/` (32 files)
+### `docs/reference/query-languages/esql/commands/` (34 files)
 - change-point.md
 - completion.md
 - directives.md
@@ -1939,6 +1964,7 @@ Generated for agent-assisted navigation.
 - keep.md
 - limit.md
 - lookup-join.md
+- metrics-info.md
 - mmr.md
 - mv_expand.md
 - processing-commands.md
@@ -1952,6 +1978,7 @@ Generated for agent-assisted navigation.
 - sort.md
 - source-commands.md
 - stats-by.md
+- ts-info.md
 - ts.md
 - uri-parts.md
 - user-agent.md

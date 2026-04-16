@@ -203,6 +203,7 @@ docs/reference/elasticsearch/command-line-tools/shard-tool.md
 docs/reference/elasticsearch/command-line-tools/syskeygen.md
 docs/reference/elasticsearch/command-line-tools/users-command.md
 docs/reference/elasticsearch/configuration-reference/auding-settings.md
+docs/reference/elasticsearch/configuration-reference/azure-repository-settings.md
 docs/reference/elasticsearch/configuration-reference/circuit-breaker-settings.md
 docs/reference/elasticsearch/configuration-reference/cluster-level-shard-allocation-routing-settings.md
 docs/reference/elasticsearch/configuration-reference/cross-cluster-replication-settings.md
@@ -210,6 +211,8 @@ docs/reference/elasticsearch/configuration-reference/data-stream-lifecycle-setti
 docs/reference/elasticsearch/configuration-reference/discovery-cluster-formation-settings.md
 docs/reference/elasticsearch/configuration-reference/enrich-settings.md
 docs/reference/elasticsearch/configuration-reference/field-data-cache-settings.md
+docs/reference/elasticsearch/configuration-reference/fs-repository-settings.md
+docs/reference/elasticsearch/configuration-reference/gcs-repository-settings.md
 docs/reference/elasticsearch/configuration-reference/health-diagnostic-settings.md
 docs/reference/elasticsearch/configuration-reference/index-lifecycle-management-settings.md
 docs/reference/elasticsearch/configuration-reference/index-management-settings.md
@@ -226,12 +229,15 @@ docs/reference/elasticsearch/configuration-reference/networking-settings.md
 docs/reference/elasticsearch/configuration-reference/node-query-cache-settings.md
 docs/reference/elasticsearch/configuration-reference/node-settings.md
 docs/reference/elasticsearch/configuration-reference/remote-clusters.md
+docs/reference/elasticsearch/configuration-reference/s3-repository-settings.md
 docs/reference/elasticsearch/configuration-reference/search-settings.md
 docs/reference/elasticsearch/configuration-reference/security-settings.md
 docs/reference/elasticsearch/configuration-reference/shard-request-cache-settings.md
 docs/reference/elasticsearch/configuration-reference/snapshot-restore-settings.md
+docs/reference/elasticsearch/configuration-reference/source-repository-settings.md
 docs/reference/elasticsearch/configuration-reference/thread-pool-settings.md
 docs/reference/elasticsearch/configuration-reference/transforms-settings.md
+docs/reference/elasticsearch/configuration-reference/url-repository-settings.md
 docs/reference/elasticsearch/configuration-reference/watcher-settings.md
 docs/reference/elasticsearch/elasticsearch-audit-events.md
 docs/reference/elasticsearch/index-lifecycle-actions/ilm-allocate.md
@@ -516,6 +522,13 @@ docs/reference/query-languages/esql/_snippets/commands/examples/limit.csv-spec/l
 docs/reference/query-languages/esql/_snippets/commands/examples/limit.csv-spec/limitByMultipleGroups.md
 docs/reference/query-languages/esql/_snippets/commands/examples/lookup-join.csv-spec/filterOnLeftSide.md
 docs/reference/query-languages/esql/_snippets/commands/examples/lookup-join.csv-spec/filterOnRightSide.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoBasic.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoCountByType.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoCountMatching.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoDiscover.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoFilterByName.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoFilterByType.md
+docs/reference/query-languages/esql/_snippets/commands/examples/metrics-info.csv-spec/metricsInfoKeep.md
 docs/reference/query-languages/esql/_snippets/commands/examples/mmr.csv-spec/simpleMMR.md
 docs/reference/query-languages/esql/_snippets/commands/examples/mmr.csv-spec/simpleMMRWithQueryVector.md
 docs/reference/query-languages/esql/_snippets/commands/examples/mmr.csv-spec/simpleMMRWithTextEmbedding.md
@@ -552,6 +565,12 @@ docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spe
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_filter.md
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_lookup_join.md
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_sort.md
+docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoBasic.md
+docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoCountByMetric.md
+docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoCountDistinctByDimensions.md
+docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoDiscover.md
+docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoFilterByGauge.md
+docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoKeep.md
 docs/reference/query-languages/esql/_snippets/commands/examples/uri_parts.csv-spec/basic.md
 docs/reference/query-languages/esql/_snippets/commands/examples/user_agent.csv-spec/basic.md
 docs/reference/query-languages/esql/_snippets/commands/layout/change_point.md
@@ -568,6 +587,7 @@ docs/reference/query-languages/esql/_snippets/commands/layout/inlinestats-by.md
 docs/reference/query-languages/esql/_snippets/commands/layout/keep.md
 docs/reference/query-languages/esql/_snippets/commands/layout/limit.md
 docs/reference/query-languages/esql/_snippets/commands/layout/lookup-join.md
+docs/reference/query-languages/esql/_snippets/commands/layout/metrics-info.md
 docs/reference/query-languages/esql/_snippets/commands/layout/mmr.md
 docs/reference/query-languages/esql/_snippets/commands/layout/mv_expand.md
 docs/reference/query-languages/esql/_snippets/commands/layout/registered_domain.md
@@ -579,6 +599,7 @@ docs/reference/query-languages/esql/_snippets/commands/layout/set.md
 docs/reference/query-languages/esql/_snippets/commands/layout/show.md
 docs/reference/query-languages/esql/_snippets/commands/layout/sort.md
 docs/reference/query-languages/esql/_snippets/commands/layout/stats-by.md
+docs/reference/query-languages/esql/_snippets/commands/layout/ts-info.md
 docs/reference/query-languages/esql/_snippets/commands/layout/ts.md
 docs/reference/query-languages/esql/_snippets/commands/layout/uri_parts.md
 docs/reference/query-languages/esql/_snippets/commands/layout/user_agent.md
@@ -1774,6 +1795,7 @@ docs/reference/query-languages/esql/commands/inlinestats-by.md
 docs/reference/query-languages/esql/commands/keep.md
 docs/reference/query-languages/esql/commands/limit.md
 docs/reference/query-languages/esql/commands/lookup-join.md
+docs/reference/query-languages/esql/commands/metrics-info.md
 docs/reference/query-languages/esql/commands/mmr.md
 docs/reference/query-languages/esql/commands/mv_expand.md
 docs/reference/query-languages/esql/commands/processing-commands.md
@@ -1787,6 +1809,7 @@ docs/reference/query-languages/esql/commands/show.md
 docs/reference/query-languages/esql/commands/sort.md
 docs/reference/query-languages/esql/commands/source-commands.md
 docs/reference/query-languages/esql/commands/stats-by.md
+docs/reference/query-languages/esql/commands/ts-info.md
 docs/reference/query-languages/esql/commands/ts.md
 docs/reference/query-languages/esql/commands/uri-parts.md
 docs/reference/query-languages/esql/commands/user-agent.md
