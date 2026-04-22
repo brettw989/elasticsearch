@@ -736,6 +736,9 @@ docs/reference/query-languages/esql/_snippets/functions/description/pow.md
 docs/reference/query-languages/esql/_snippets/functions/description/present.md
 docs/reference/query-languages/esql/_snippets/functions/description/present_over_time.md
 docs/reference/query-languages/esql/_snippets/functions/description/qstr.md
+docs/reference/query-languages/esql/_snippets/functions/description/range_max.md
+docs/reference/query-languages/esql/_snippets/functions/description/range_min.md
+docs/reference/query-languages/esql/_snippets/functions/description/range_within.md
 docs/reference/query-languages/esql/_snippets/functions/description/rate.md
 docs/reference/query-languages/esql/_snippets/functions/description/repeat.md
 docs/reference/query-languages/esql/_snippets/functions/description/replace.md
@@ -797,6 +800,7 @@ docs/reference/query-languages/esql/_snippets/functions/description/to_boolean.m
 docs/reference/query-languages/esql/_snippets/functions/description/to_cartesianpoint.md
 docs/reference/query-languages/esql/_snippets/functions/description/to_cartesianshape.md
 docs/reference/query-languages/esql/_snippets/functions/description/to_date_nanos.md
+docs/reference/query-languages/esql/_snippets/functions/description/to_date_range.md
 docs/reference/query-languages/esql/_snippets/functions/description/to_dateperiod.md
 docs/reference/query-languages/esql/_snippets/functions/description/to_datetime.md
 docs/reference/query-languages/esql/_snippets/functions/description/to_degrees.md
@@ -823,6 +827,7 @@ docs/reference/query-languages/esql/_snippets/functions/description/top.md
 docs/reference/query-languages/esql/_snippets/functions/description/top_snippets.md
 docs/reference/query-languages/esql/_snippets/functions/description/trange.md
 docs/reference/query-languages/esql/_snippets/functions/description/trim.md
+docs/reference/query-languages/esql/_snippets/functions/description/tstep.md
 docs/reference/query-languages/esql/_snippets/functions/description/url_decode.md
 docs/reference/query-languages/esql/_snippets/functions/description/url_encode.md
 docs/reference/query-languages/esql/_snippets/functions/description/url_encode_component.md
@@ -949,6 +954,9 @@ docs/reference/query-languages/esql/_snippets/functions/examples/pow.md
 docs/reference/query-languages/esql/_snippets/functions/examples/present.md
 docs/reference/query-languages/esql/_snippets/functions/examples/present_over_time.md
 docs/reference/query-languages/esql/_snippets/functions/examples/qstr.md
+docs/reference/query-languages/esql/_snippets/functions/examples/range_max.md
+docs/reference/query-languages/esql/_snippets/functions/examples/range_min.md
+docs/reference/query-languages/esql/_snippets/functions/examples/range_within.md
 docs/reference/query-languages/esql/_snippets/functions/examples/rate.md
 docs/reference/query-languages/esql/_snippets/functions/examples/repeat.md
 docs/reference/query-languages/esql/_snippets/functions/examples/replace.md
@@ -1010,6 +1018,7 @@ docs/reference/query-languages/esql/_snippets/functions/examples/to_boolean.md
 docs/reference/query-languages/esql/_snippets/functions/examples/to_cartesianpoint.md
 docs/reference/query-languages/esql/_snippets/functions/examples/to_cartesianshape.md
 docs/reference/query-languages/esql/_snippets/functions/examples/to_date_nanos.md
+docs/reference/query-languages/esql/_snippets/functions/examples/to_date_range.md
 docs/reference/query-languages/esql/_snippets/functions/examples/to_dateperiod.md
 docs/reference/query-languages/esql/_snippets/functions/examples/to_datetime.md
 docs/reference/query-languages/esql/_snippets/functions/examples/to_degrees.md
@@ -1036,6 +1045,7 @@ docs/reference/query-languages/esql/_snippets/functions/examples/top.md
 docs/reference/query-languages/esql/_snippets/functions/examples/top_snippets.md
 docs/reference/query-languages/esql/_snippets/functions/examples/trange.md
 docs/reference/query-languages/esql/_snippets/functions/examples/trim.md
+docs/reference/query-languages/esql/_snippets/functions/examples/tstep.md
 docs/reference/query-languages/esql/_snippets/functions/examples/url_decode.md
 docs/reference/query-languages/esql/_snippets/functions/examples/url_encode.md
 docs/reference/query-languages/esql/_snippets/functions/examples/url_encode_component.md
@@ -1174,6 +1184,9 @@ docs/reference/query-languages/esql/_snippets/functions/layout/pow.md
 docs/reference/query-languages/esql/_snippets/functions/layout/present.md
 docs/reference/query-languages/esql/_snippets/functions/layout/present_over_time.md
 docs/reference/query-languages/esql/_snippets/functions/layout/qstr.md
+docs/reference/query-languages/esql/_snippets/functions/layout/range_max.md
+docs/reference/query-languages/esql/_snippets/functions/layout/range_min.md
+docs/reference/query-languages/esql/_snippets/functions/layout/range_within.md
 docs/reference/query-languages/esql/_snippets/functions/layout/rate.md
 docs/reference/query-languages/esql/_snippets/functions/layout/repeat.md
 docs/reference/query-languages/esql/_snippets/functions/layout/replace.md
@@ -1235,6 +1248,7 @@ docs/reference/query-languages/esql/_snippets/functions/layout/to_boolean.md
 docs/reference/query-languages/esql/_snippets/functions/layout/to_cartesianpoint.md
 docs/reference/query-languages/esql/_snippets/functions/layout/to_cartesianshape.md
 docs/reference/query-languages/esql/_snippets/functions/layout/to_date_nanos.md
+docs/reference/query-languages/esql/_snippets/functions/layout/to_date_range.md
 docs/reference/query-languages/esql/_snippets/functions/layout/to_dateperiod.md
 docs/reference/query-languages/esql/_snippets/functions/layout/to_datetime.md
 docs/reference/query-languages/esql/_snippets/functions/layout/to_degrees.md
@@ -1261,6 +1275,7 @@ docs/reference/query-languages/esql/_snippets/functions/layout/top.md
 docs/reference/query-languages/esql/_snippets/functions/layout/top_snippets.md
 docs/reference/query-languages/esql/_snippets/functions/layout/trange.md
 docs/reference/query-languages/esql/_snippets/functions/layout/trim.md
+docs/reference/query-languages/esql/_snippets/functions/layout/tstep.md
 docs/reference/query-languages/esql/_snippets/functions/layout/url_decode.md
 docs/reference/query-languages/esql/_snippets/functions/layout/url_encode.md
 docs/reference/query-languages/esql/_snippets/functions/layout/url_encode_component.md
@@ -1387,6 +1402,9 @@ docs/reference/query-languages/esql/_snippets/functions/parameters/pow.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/present.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/present_over_time.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/qstr.md
+docs/reference/query-languages/esql/_snippets/functions/parameters/range_max.md
+docs/reference/query-languages/esql/_snippets/functions/parameters/range_min.md
+docs/reference/query-languages/esql/_snippets/functions/parameters/range_within.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/rate.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/repeat.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/replace.md
@@ -1448,6 +1466,7 @@ docs/reference/query-languages/esql/_snippets/functions/parameters/to_boolean.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/to_cartesianpoint.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/to_cartesianshape.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/to_date_nanos.md
+docs/reference/query-languages/esql/_snippets/functions/parameters/to_date_range.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/to_dateperiod.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/to_datetime.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/to_degrees.md
@@ -1474,6 +1493,7 @@ docs/reference/query-languages/esql/_snippets/functions/parameters/top.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/top_snippets.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/trange.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/trim.md
+docs/reference/query-languages/esql/_snippets/functions/parameters/tstep.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/url_decode.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/url_encode.md
 docs/reference/query-languages/esql/_snippets/functions/parameters/url_encode_component.md
@@ -1687,6 +1707,7 @@ docs/reference/query-languages/esql/_snippets/functions/types/top.md
 docs/reference/query-languages/esql/_snippets/functions/types/top_snippets.md
 docs/reference/query-languages/esql/_snippets/functions/types/trange.md
 docs/reference/query-languages/esql/_snippets/functions/types/trim.md
+docs/reference/query-languages/esql/_snippets/functions/types/tstep.md
 docs/reference/query-languages/esql/_snippets/functions/types/url_decode.md
 docs/reference/query-languages/esql/_snippets/functions/types/url_encode.md
 docs/reference/query-languages/esql/_snippets/functions/types/url_encode_component.md
@@ -1890,6 +1911,9 @@ docs/reference/query-languages/esql/functions-operators/date-time-functions/date
 docs/reference/query-languages/esql/functions-operators/date-time-functions/day_name.md
 docs/reference/query-languages/esql/functions-operators/date-time-functions/month_name.md
 docs/reference/query-languages/esql/functions-operators/date-time-functions/now.md
+docs/reference/query-languages/esql/functions-operators/date-time-functions/range_max.md
+docs/reference/query-languages/esql/functions-operators/date-time-functions/range_min.md
+docs/reference/query-languages/esql/functions-operators/date-time-functions/range_within.md
 docs/reference/query-languages/esql/functions-operators/date-time-functions/trange.md
 docs/reference/query-languages/esql/functions-operators/dense-vector-functions.md
 docs/reference/query-languages/esql/functions-operators/dense-vector-functions/embedding.md
@@ -2186,6 +2210,9 @@ docs/reference/query-languages/esql/kibana/docs/functions/pow.md
 docs/reference/query-languages/esql/kibana/docs/functions/present.md
 docs/reference/query-languages/esql/kibana/docs/functions/present_over_time.md
 docs/reference/query-languages/esql/kibana/docs/functions/qstr.md
+docs/reference/query-languages/esql/kibana/docs/functions/range_max.md
+docs/reference/query-languages/esql/kibana/docs/functions/range_min.md
+docs/reference/query-languages/esql/kibana/docs/functions/range_within.md
 docs/reference/query-languages/esql/kibana/docs/functions/rate.md
 docs/reference/query-languages/esql/kibana/docs/functions/repeat.md
 docs/reference/query-languages/esql/kibana/docs/functions/replace.md
@@ -2247,6 +2274,7 @@ docs/reference/query-languages/esql/kibana/docs/functions/to_boolean.md
 docs/reference/query-languages/esql/kibana/docs/functions/to_cartesianpoint.md
 docs/reference/query-languages/esql/kibana/docs/functions/to_cartesianshape.md
 docs/reference/query-languages/esql/kibana/docs/functions/to_date_nanos.md
+docs/reference/query-languages/esql/kibana/docs/functions/to_date_range.md
 docs/reference/query-languages/esql/kibana/docs/functions/to_dateperiod.md
 docs/reference/query-languages/esql/kibana/docs/functions/to_datetime.md
 docs/reference/query-languages/esql/kibana/docs/functions/to_degrees.md
@@ -2273,6 +2301,7 @@ docs/reference/query-languages/esql/kibana/docs/functions/top.md
 docs/reference/query-languages/esql/kibana/docs/functions/top_snippets.md
 docs/reference/query-languages/esql/kibana/docs/functions/trange.md
 docs/reference/query-languages/esql/kibana/docs/functions/trim.md
+docs/reference/query-languages/esql/kibana/docs/functions/tstep.md
 docs/reference/query-languages/esql/kibana/docs/functions/url_decode.md
 docs/reference/query-languages/esql/kibana/docs/functions/url_encode.md
 docs/reference/query-languages/esql/kibana/docs/functions/url_encode_component.md

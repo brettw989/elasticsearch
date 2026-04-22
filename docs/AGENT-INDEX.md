@@ -2,7 +2,7 @@
 Generated for agent-assisted navigation.
 
 ## Overview
-- Total documentation files: 2658
+- Total documentation files: 2687
 - Total directories: 88
 - Source: `docs/` directory tree
 
@@ -769,7 +769,7 @@ Generated for agent-assisted navigation.
 - percentile.md
 - values.md
 
-### `docs/reference/query-languages/esql/_snippets/functions/description/` (213 files)
+### `docs/reference/query-languages/esql/_snippets/functions/description/` (218 files)
 - abs.md
 - absent.md
 - absent_over_time.md
@@ -883,6 +883,9 @@ Generated for agent-assisted navigation.
 - present.md
 - present_over_time.md
 - qstr.md
+- range_max.md
+- range_min.md
+- range_within.md
 - rate.md
 - repeat.md
 - replace.md
@@ -944,6 +947,7 @@ Generated for agent-assisted navigation.
 - to_cartesianpoint.md
 - to_cartesianshape.md
 - to_date_nanos.md
+- to_date_range.md
 - to_dateperiod.md
 - to_datetime.md
 - to_degrees.md
@@ -970,6 +974,7 @@ Generated for agent-assisted navigation.
 - top_snippets.md
 - trange.md
 - trim.md
+- tstep.md
 - url_decode.md
 - url_encode.md
 - url_encode_component.md
@@ -984,7 +989,7 @@ Generated for agent-assisted navigation.
 - variance_over_time.md
 - weighted_avg.md
 
-### `docs/reference/query-languages/esql/_snippets/functions/examples/` (213 files)
+### `docs/reference/query-languages/esql/_snippets/functions/examples/` (218 files)
 - abs.md
 - absent.md
 - absent_over_time.md
@@ -1098,6 +1103,9 @@ Generated for agent-assisted navigation.
 - present.md
 - present_over_time.md
 - qstr.md
+- range_max.md
+- range_min.md
+- range_within.md
 - rate.md
 - repeat.md
 - replace.md
@@ -1159,6 +1167,7 @@ Generated for agent-assisted navigation.
 - to_cartesianpoint.md
 - to_cartesianshape.md
 - to_date_nanos.md
+- to_date_range.md
 - to_dateperiod.md
 - to_datetime.md
 - to_degrees.md
@@ -1185,6 +1194,7 @@ Generated for agent-assisted navigation.
 - top_snippets.md
 - trange.md
 - trim.md
+- tstep.md
 - url_decode.md
 - url_encode.md
 - url_encode_component.md
@@ -1213,7 +1223,7 @@ Generated for agent-assisted navigation.
 - to_ip.md
 - top_snippets.md
 
-### `docs/reference/query-languages/esql/_snippets/functions/layout/` (213 files)
+### `docs/reference/query-languages/esql/_snippets/functions/layout/` (218 files)
 - abs.md
 - absent.md
 - absent_over_time.md
@@ -1327,6 +1337,9 @@ Generated for agent-assisted navigation.
 - present.md
 - present_over_time.md
 - qstr.md
+- range_max.md
+- range_min.md
+- range_within.md
 - rate.md
 - repeat.md
 - replace.md
@@ -1388,6 +1401,7 @@ Generated for agent-assisted navigation.
 - to_cartesianpoint.md
 - to_cartesianshape.md
 - to_date_nanos.md
+- to_date_range.md
 - to_dateperiod.md
 - to_datetime.md
 - to_degrees.md
@@ -1414,6 +1428,7 @@ Generated for agent-assisted navigation.
 - top_snippets.md
 - trange.md
 - trim.md
+- tstep.md
 - url_decode.md
 - url_encode.md
 - url_encode_component.md
@@ -1428,7 +1443,7 @@ Generated for agent-assisted navigation.
 - variance_over_time.md
 - weighted_avg.md
 
-### `docs/reference/query-languages/esql/_snippets/functions/parameters/` (213 files)
+### `docs/reference/query-languages/esql/_snippets/functions/parameters/` (218 files)
 - abs.md
 - absent.md
 - absent_over_time.md
@@ -1542,6 +1557,9 @@ Generated for agent-assisted navigation.
 - present.md
 - present_over_time.md
 - qstr.md
+- range_max.md
+- range_min.md
+- range_within.md
 - rate.md
 - repeat.md
 - replace.md
@@ -1603,6 +1621,7 @@ Generated for agent-assisted navigation.
 - to_cartesianpoint.md
 - to_cartesianshape.md
 - to_date_nanos.md
+- to_date_range.md
 - to_dateperiod.md
 - to_datetime.md
 - to_degrees.md
@@ -1629,6 +1648,7 @@ Generated for agent-assisted navigation.
 - top_snippets.md
 - trange.md
 - trim.md
+- tstep.md
 - url_decode.md
 - url_encode.md
 - url_encode_component.md
@@ -1643,7 +1663,7 @@ Generated for agent-assisted navigation.
 - variance_over_time.md
 - weighted_avg.md
 
-### `docs/reference/query-languages/esql/_snippets/functions/types/` (213 files)
+### `docs/reference/query-languages/esql/_snippets/functions/types/` (214 files)
 - abs.md
 - absent.md
 - absent_over_time.md
@@ -1844,6 +1864,7 @@ Generated for agent-assisted navigation.
 - top_snippets.md
 - trange.md
 - trim.md
+- tstep.md
 - url_decode.md
 - url_encode.md
 - url_encode_component.md
@@ -2044,7 +2065,7 @@ Generated for agent-assisted navigation.
 - greatest.md
 - least.md
 
-### `docs/reference/query-languages/esql/functions-operators/date-time-functions/` (9 files)
+### `docs/reference/query-languages/esql/functions-operators/date-time-functions/` (12 files)
 - date_diff.md
 - date_extract.md
 - date_format.md
@@ -2053,6 +2074,9 @@ Generated for agent-assisted navigation.
 - day_name.md
 - month_name.md
 - now.md
+- range_max.md
+- range_min.md
+- range_within.md
 - trange.md
 
 ### `docs/reference/query-languages/esql/functions-operators/dense-vector-functions/` (8 files)
@@ -2246,7 +2270,7 @@ Generated for agent-assisted navigation.
 - to_unsigned_long.md
 - to_version.md
 
-### `docs/reference/query-languages/esql/kibana/docs/functions/` (213 files)
+### `docs/reference/query-languages/esql/kibana/docs/functions/` (218 files)
 - abs.md
 - absent.md
 - absent_over_time.md
@@ -2360,6 +2384,9 @@ Generated for agent-assisted navigation.
 - present.md
 - present_over_time.md
 - qstr.md
+- range_max.md
+- range_min.md
+- range_within.md
 - rate.md
 - repeat.md
 - replace.md
@@ -2421,6 +2448,7 @@ Generated for agent-assisted navigation.
 - to_cartesianpoint.md
 - to_cartesianshape.md
 - to_date_nanos.md
+- to_date_range.md
 - to_dateperiod.md
 - to_datetime.md
 - to_degrees.md
@@ -2447,6 +2475,7 @@ Generated for agent-assisted navigation.
 - top_snippets.md
 - trange.md
 - trim.md
+- tstep.md
 - url_decode.md
 - url_encode.md
 - url_encode_component.md
