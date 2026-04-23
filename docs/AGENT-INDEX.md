@@ -240,7 +240,7 @@ Generated for agent-assisted navigation.
 - syskeygen.md
 - users-command.md
 
-### `docs/reference/elasticsearch/configuration-reference/` (37 files)
+### `docs/reference/elasticsearch/configuration-reference/` (39 files)
 - auding-settings.md
 - azure-repository-settings.md
 - circuit-breaker-settings.md
@@ -258,6 +258,7 @@ Generated for agent-assisted navigation.
 - index-recovery-settings.md
 - index.md
 - indexing-buffer-settings.md
+- indexing-pressure-settings.md
 - inference-settings.md
 - license-settings.md
 - local-gateway.md
@@ -267,6 +268,7 @@ Generated for agent-assisted navigation.
 - networking-settings.md
 - node-query-cache-settings.md
 - node-settings.md
+- path.md
 - remote-clusters.md
 - s3-repository-settings.md
 - search-settings.md
@@ -294,7 +296,7 @@ Generated for agent-assisted navigation.
 - ilm-wait-for-snapshot.md
 - index.md
 
-### `docs/reference/elasticsearch/index-settings/` (22 files)
+### `docs/reference/elasticsearch/index-settings/` (20 files)
 - data-tier-allocation.md
 - history-retention.md
 - index-block.md
@@ -302,9 +304,7 @@ Generated for agent-assisted navigation.
 - index.md
 - mapping-limit.md
 - merge.md
-- path.md
 - preloading-data-into-file-system-cache.md
-- pressure.md
 - recovery-prioritization.md
 - serverless.md
 - shard-allocation.md

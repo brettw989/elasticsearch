@@ -219,6 +219,7 @@ docs/reference/elasticsearch/configuration-reference/index-management-settings.m
 docs/reference/elasticsearch/configuration-reference/index-recovery-settings.md
 docs/reference/elasticsearch/configuration-reference/index.md
 docs/reference/elasticsearch/configuration-reference/indexing-buffer-settings.md
+docs/reference/elasticsearch/configuration-reference/indexing-pressure-settings.md
 docs/reference/elasticsearch/configuration-reference/inference-settings.md
 docs/reference/elasticsearch/configuration-reference/license-settings.md
 docs/reference/elasticsearch/configuration-reference/local-gateway.md
@@ -228,6 +229,7 @@ docs/reference/elasticsearch/configuration-reference/monitoring-settings.md
 docs/reference/elasticsearch/configuration-reference/networking-settings.md
 docs/reference/elasticsearch/configuration-reference/node-query-cache-settings.md
 docs/reference/elasticsearch/configuration-reference/node-settings.md
+docs/reference/elasticsearch/configuration-reference/path.md
 docs/reference/elasticsearch/configuration-reference/remote-clusters.md
 docs/reference/elasticsearch/configuration-reference/s3-repository-settings.md
 docs/reference/elasticsearch/configuration-reference/search-settings.md
@@ -261,9 +263,7 @@ docs/reference/elasticsearch/index-settings/index-modules.md
 docs/reference/elasticsearch/index-settings/index.md
 docs/reference/elasticsearch/index-settings/mapping-limit.md
 docs/reference/elasticsearch/index-settings/merge.md
-docs/reference/elasticsearch/index-settings/path.md
 docs/reference/elasticsearch/index-settings/preloading-data-into-file-system-cache.md
-docs/reference/elasticsearch/index-settings/pressure.md
 docs/reference/elasticsearch/index-settings/recovery-prioritization.md
 docs/reference/elasticsearch/index-settings/serverless.md
 docs/reference/elasticsearch/index-settings/shard-allocation.md
