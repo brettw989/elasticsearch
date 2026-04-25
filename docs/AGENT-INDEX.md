@@ -2,8 +2,8 @@
 Generated for agent-assisted navigation.
 
 ## Overview
-- Total documentation files: 2699
-- Total directories: 88
+- Total documentation files: 2710
+- Total directories: 89
 - Source: `docs/` directory tree
 
 ## Directory Listing
@@ -530,7 +530,7 @@ Generated for agent-assisted navigation.
 - eql-pipe-ref.md
 - eql-syntax.md
 
-### `docs/reference/query-languages/esql/` (29 files)
+### `docs/reference/query-languages/esql/` (30 files)
 - README.md
 - esql-advanced.md
 - esql-commands.md
@@ -559,6 +559,7 @@ Generated for agent-assisted navigation.
 - esql-troubleshooting.md
 - esql-types-and-fields.md
 - esql-use-cases.md
+- esql-views.md
 - limitations.md
 
 ### `docs/reference/query-languages/esql/_snippets/commands/examples/change_point.csv-spec/` (1 files)
@@ -690,13 +691,16 @@ Generated for agent-assisted navigation.
 - statsUnnamedColumnEval.md
 - statsWithoutBy.md
 
-### `docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/` (7 files)
+### `docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/` (10 files)
 - basic_subquery.md
 - multiple_subqueries.md
 - subquery_only.md
 - subquery_with_aggregation.md
 - subquery_with_filter.md
 - subquery_with_lookup_join.md
+- subquery_with_metadata.md
+- subquery_with_metadata_inner.md
+- subquery_with_metadata_outer.md
 - subquery_with_sort.md
 
 ### `docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/` (6 files)
@@ -712,6 +716,13 @@ Generated for agent-assisted navigation.
 
 ### `docs/reference/query-languages/esql/_snippets/commands/examples/user_agent.csv-spec/` (1 files)
 - basic.md
+
+### `docs/reference/query-languages/esql/_snippets/commands/examples/views.csv-spec/` (5 files)
+- airports_mp_filtered_combined.md
+- views_country_addresses.md
+- views_country_filtered.md
+- views_country_wildcard_sum.md
+- views_plain_addresses.md
 
 ### `docs/reference/query-languages/esql/_snippets/commands/layout/` (32 files)
 - change_point.md
@@ -757,7 +768,8 @@ Generated for agent-assisted navigation.
 ### `docs/reference/query-languages/esql/_snippets/commands/types/` (1 files)
 - lookup-join.md
 
-### `docs/reference/query-languages/esql/_snippets/common/` (1 files)
+### `docs/reference/query-languages/esql/_snippets/common/` (2 files)
+- comparing_views_subqueries_fork.md
 - result-set-size-limitation.md
 
 ### `docs/reference/query-languages/esql/_snippets/functions/appendix/` (7 files)
@@ -1213,7 +1225,7 @@ Generated for agent-assisted navigation.
 - variance_over_time.md
 - weighted_avg.md
 
-### `docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/` (12 files)
+### `docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/` (13 files)
 - categorize.md
 - chunk.md
 - date_parse.md
@@ -1224,6 +1236,7 @@ Generated for agent-assisted navigation.
 - match.md
 - match_phrase.md
 - qstr.md
+- text_embedding.md
 - to_ip.md
 - top_snippets.md
 

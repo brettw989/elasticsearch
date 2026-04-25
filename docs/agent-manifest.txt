@@ -568,6 +568,9 @@ docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spe
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_aggregation.md
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_filter.md
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_lookup_join.md
+docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_metadata.md
+docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_metadata_inner.md
+docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_metadata_outer.md
 docs/reference/query-languages/esql/_snippets/commands/examples/subquery.csv-spec/subquery_with_sort.md
 docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoBasic.md
 docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoCountByMetric.md
@@ -577,6 +580,11 @@ docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec
 docs/reference/query-languages/esql/_snippets/commands/examples/ts-info.csv-spec/tsInfoKeep.md
 docs/reference/query-languages/esql/_snippets/commands/examples/uri_parts.csv-spec/basic.md
 docs/reference/query-languages/esql/_snippets/commands/examples/user_agent.csv-spec/basic.md
+docs/reference/query-languages/esql/_snippets/commands/examples/views.csv-spec/airports_mp_filtered_combined.md
+docs/reference/query-languages/esql/_snippets/commands/examples/views.csv-spec/views_country_addresses.md
+docs/reference/query-languages/esql/_snippets/commands/examples/views.csv-spec/views_country_filtered.md
+docs/reference/query-languages/esql/_snippets/commands/examples/views.csv-spec/views_country_wildcard_sum.md
+docs/reference/query-languages/esql/_snippets/commands/examples/views.csv-spec/views_plain_addresses.md
 docs/reference/query-languages/esql/_snippets/commands/layout/change_point.md
 docs/reference/query-languages/esql/_snippets/commands/layout/completion.md
 docs/reference/query-languages/esql/_snippets/commands/layout/dissect.md
@@ -615,6 +623,7 @@ docs/reference/query-languages/esql/_snippets/commands/settings/time_zone.md
 docs/reference/query-languages/esql/_snippets/commands/settings/toc.md
 docs/reference/query-languages/esql/_snippets/commands/settings/unmapped_fields.md
 docs/reference/query-languages/esql/_snippets/commands/types/lookup-join.md
+docs/reference/query-languages/esql/_snippets/common/comparing_views_subqueries_fork.md
 docs/reference/query-languages/esql/_snippets/common/result-set-size-limitation.md
 docs/reference/query-languages/esql/_snippets/functions/appendix/count_distinct.md
 docs/reference/query-languages/esql/_snippets/functions/appendix/first.md
@@ -1073,6 +1082,7 @@ docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/kql.
 docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/match.md
 docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/match_phrase.md
 docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/qstr.md
+docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/text_embedding.md
 docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/to_ip.md
 docs/reference/query-languages/esql/_snippets/functions/functionNamedParams/top_snippets.md
 docs/reference/query-languages/esql/_snippets/functions/layout/abs.md
@@ -1879,6 +1889,7 @@ docs/reference/query-languages/esql/esql-time-spans.md
 docs/reference/query-languages/esql/esql-troubleshooting.md
 docs/reference/query-languages/esql/esql-types-and-fields.md
 docs/reference/query-languages/esql/esql-use-cases.md
+docs/reference/query-languages/esql/esql-views.md
 docs/reference/query-languages/esql/functions-operators/aggregation-functions.md
 docs/reference/query-languages/esql/functions-operators/aggregation-functions/absent.md
 docs/reference/query-languages/esql/functions-operators/aggregation-functions/avg.md
